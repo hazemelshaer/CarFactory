@@ -1,6 +1,6 @@
 //
 //  fireTruck.cpp
-//  Study
+//  CarFactory
 //
 //  Created by Hazem Elshaer on 12.04.24.
 //
@@ -8,12 +8,8 @@
 #include "fireTruck.hpp"
 
 
-void FireTruck::makeSignal() {
+void FireTruck::makeSpecialSignal() {
  std::cout<<"Performing special fire truck signal"<<std::endl;
-}
-
-void FireTruck::setWaterCapacity(int capacity){
-    FireTruck::waterCapacity = capacity;
 }
 int FireTruck::getWaterCapacity(){
     return FireTruck::waterCapacity;
@@ -21,9 +17,6 @@ int FireTruck::getWaterCapacity(){
 void FireTruck::performSpecialFunc(){
     std::cout<<"Putting out fire"<<std::endl;
 }
-FireTruck::FireTruck(){
-
-}
-void FireTruck::getType(){
-    std::cout<<"Fire Truck"<<std::endl;
+FireTruck::FireTruck(int capacity){
+    waterCapacity=capacity;
 }

@@ -1,6 +1,6 @@
 //
 //  fireTruck.hpp
-//  Study
+//  CarFactory
 //
 //  Created by Hazem Elshaer on 12.04.24.
 //
@@ -12,14 +12,13 @@
 #include "truck.hpp"
 
 class FireTruck : public Truck{
+private:
     int waterCapacity;
 public:
-    FireTruck();
-    void setWaterCapacity(int capacity);
+    FireTruck(int waterCapacity);
     int getWaterCapacity();
     void performSpecialFunc();
-    void makeSignal();
-    void getType();
+    void makeSpecialSignal();
 };
 
 #endif /* fireTruck_hpp */

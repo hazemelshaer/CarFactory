@@ -1,6 +1,6 @@
 //
 //  car.hpp
-//  Study
+//  CarFactory
 //
 //  Created by Hazem Elshaer on 12.04.24.
 //
@@ -11,20 +11,34 @@
 #include <stdio.h>
 #include <string>
 
+namespace Car {
+
+enum carType{
+    Sedan=0,
+    SUV,
+    Bus,
+    FireTruck,
+    TowTrack,
+    CraneTruck
+};
+
 class Car{
+private:
     std::string color;
     int weight;
     int doorNumber;
 public:
-    std::string carType;
     Car();
-    Car(std::string type);
+    Car(carType type);
     void drive();
     virtual void makeSignal();
     std::string getColor();
     int getWeight();
     int getDoorNumber();
-    virtual void getType();
-    
 };
+
+};
+
+
+
 #endif /* car_hpp */

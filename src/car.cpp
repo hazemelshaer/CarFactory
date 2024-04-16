@@ -1,6 +1,6 @@
 //
 //  car.cpp
-//  Study
+//  CarFactory
 //
 //  Created by Hazem Elshaer on 12.04.24.
 //
@@ -8,49 +8,48 @@
 #include <iostream>
 #include "car.hpp"
 
-
-Car::Car(){
-//    std::string type;
-//    std::cout<<"Enter car Type: "<<std::endl;
-//    std::cin>>type;
-    carType="normal";
-//    std::cout<<"Created car of Type: "<<carType<<std::endl;
-//    std::transform(type.begin(), type.end(), type.begin(),
-//                   [](unsigned char c){ return std::tolower(c); });
-//    if ((type=="sedan") || (type=="suv") || (type=="truck"))
-//        carType=type;
-//    else
-//        std::cout<<"Invalid car type"<<std::endl;
-    
+Car::Car::Car(){
+    color="Red";
+    weight = 120;
+    doorNumber=4;
 }
-Car::Car(std::string type){
-    if ((type=="sedan") || (type=="suv") || (type=="truck"))
-        carType=type;
-    else
-        std::cout<<"Invalid car type"<<std::endl;
+Car::Car::Car(carType type){
+    switch (type) {
+        case 0:
+            color="Red";
+            weight = 120;
+            doorNumber=4;
+            break;
+        case 3:
+            color="Yellow";
+            weight = 520;
+            doorNumber=2;
+            break;
+        default:
+            color="Red";
+            weight = 120;
+            doorNumber=4;
+            break;
+    }
 }
-
-void Car::drive(){
+void Car::Car::drive(){
     std::cout<<"Driving the vehicle"<<std::endl;
 }
 
 
-void Car::makeSignal(){
+void Car::Car::makeSignal(){
     std::cout<<"Making normal signal"<<std::endl;
 }
 
 
-std::string Car::getColor(){
+std::string Car::Car::getColor(){
     return color;
 }
 
-int Car::getWeight(){
+int Car::Car::getWeight(){
     return weight;
 }
 
-int Car::getDoorNumber(){
+int Car::Car::getDoorNumber(){
     return doorNumber;
-}
-void Car::getType(){
-    std::cout<<carType<<std::endl;
 }
