@@ -29,7 +29,7 @@ private:
     int doorNumber;
 public:
     Car();
-    Car(carType type);
+    Car(carType type, std::string wantedColor="Red");
     void drive();
     virtual void makeSignal();
     std::string getColor();

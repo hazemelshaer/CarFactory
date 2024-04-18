@@ -17,7 +17,7 @@
 class CarPlant {
 public:
     CarPlant();
-    std::vector<Car::Car*> produceCars(::Car::carType type, int count, int waterCapacity=0);
+    std::vector<Car::Car*> produceCars(::Car::carType type, int count,std::string wantedColor="Red", int waterCapacity=0);
     void testFunc(std::vector<Car::Car*> cars);
 };
 

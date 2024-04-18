@@ -13,20 +13,30 @@ Car::Car::Car(){
     weight = 120;
     doorNumber=4;
 }
-Car::Car::Car(carType type){
+Car::Car::Car(carType type, std::string wantedColor){
     switch (type) {
         case 0:
-            color="Red";
+            color=wantedColor;
+            weight = 120;
+            doorNumber=4;
+            break;
+        case 1:
+            color=wantedColor;
+            weight = 120;
+            doorNumber=4;
+            break;
+        case 2:
+            color=wantedColor;
             weight = 120;
             doorNumber=4;
             break;
         case 3:
-            color="Yellow";
+            color=wantedColor;
             weight = 520;
             doorNumber=2;
             break;
         default:
-            color="Red";
+            color=wantedColor;
             weight = 120;
             doorNumber=4;
             break;

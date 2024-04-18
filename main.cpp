@@ -10,19 +10,16 @@
 #include <string>
 #include <memory>
 #include "carPlant.hpp"
-#include "car.hpp"
-#include "truck.hpp"
-#include "fireTruck.hpp"
 
 using namespace std;
 
 
 int main(int argc, const char * argv[]) {
     CarPlant plant;
-    std::vector<Car::Car*> cars;
-    cars=plant.produceCars(Car::Sedan, 5); // Produce 5 Fire Trucks
-    plant.produceCars(Car::FireTruck, 5, 750); // Produce 5 Fire Trucks with 750 capacity
-    plant.produceCars(Car::FireTruck, 5);     // Produce 5 Sedans
+    std::vector<Car::Car*> cars,fireTrucks;
+    cars=plant.produceCars(Car::Sedan, 5); // Produce 5 sedans
     plant.testFunc(cars);
+    fireTrucks=plant.produceCars(Car::FireTruck, 5, "Red" ,750); // Produce 5 Fire Trucks with 750 capacity
+    plant.testFunc(fireTrucks);
     return 0;
 }
