@@ -15,9 +15,27 @@ class FireTruck : public Truck{
 private:
     int waterCapacity;
 public:
+/**
+ * @brief Construct a new Fire Truck object
+ * 
+ * @param waterCapacity 
+ */
     FireTruck(int waterCapacity);
+    /**
+     * @brief Get the Water Capacity object
+     * 
+     * @return int 
+     */
     int getWaterCapacity();
+    /**
+     * @brief implement the truck's special function
+     * 
+     */
     void performSpecialFunc();
+    /**
+     * @brief perform special signal only for Firetrucks
+     * 
+     */
     void makeSpecialSignal();
 };
 

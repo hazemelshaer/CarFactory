@@ -16,8 +16,26 @@
 
 class CarPlant {
 public:
+/**
+ * @brief Construct a new Car Factory object
+ * 
+ */
     CarPlant();
+    /**
+     * @brief Produce cars of specefic type, color and if applicable waterCapacity
+     * 
+     * @param type 
+     * @param count 
+     * @param wantedColor 
+     * @param waterCapacity 
+     * @return std::vector<Car::Car*> 
+     */
     std::vector<Car::Car*> produceCars(::Car::carType type, int count,std::string wantedColor="Red", int waterCapacity=0);
+    /**
+     * @brief test the passed cars basic functions
+     * 
+     * @param cars 
+     */
     void testFunc(std::vector<Car::Car*> cars);
 };
 
